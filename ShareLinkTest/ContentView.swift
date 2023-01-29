@@ -31,10 +31,11 @@ struct ContentView: View {
                     }
                     .foregroundColor(.red)
                 }
+                
             }
 
             VStack(alignment: .leading) {
-                Text("4.Transferableに準拠した独自の型を渡す")
+                Text("4.Transferableに準拠した独自の型を渡し、プレビューもカスタマイズ")
                 ShareLink(
                     item: photo,
                     preview: SharePreview(
@@ -43,20 +44,7 @@ struct ContentView: View {
             }
 
             VStack(alignment: .leading) {
-                // システムは自動的にプレビューを決定することができます。プレビューは任意で指定することもできます。たとえば、URLを共有する場合、自動プレビューでは、まずベースURLとともにプレースホルダーのリンクアイコンが表示され、ネットワーク経由でリンクのメタデータが取得されます。プレビューは、リンクのアイコンとタイトルが利用可能になった時点で更新されます
-                Text("5.プレビューをカスタマイズ")
-                ShareLink(
-                    item: photo,
-                    subject: Text("Cool Photo"),
-                    message: Text("Check it out!"),
-                    preview: SharePreview(
-                        photo.caption,
-                        image: photo.image))
-
-            }
-
-            VStack(alignment: .leading) {
-                Text("6.サブジェクトとメッセージを追加")
+                Text("5.サブジェクトとメッセージを追加")
                 ShareLink(
                     item: photo,
                     subject: Text("Cool Photo"),
